@@ -1,8 +1,11 @@
 const express = require("express");
 const userRoutes = require("./routes/user.routes");
 const dotenv = require("dotenv");
-
+const connectToDb = require("./config/db");
 dotenv.config(); // env variables are accessible to whole application
+
+// connection to db
+connectToDb();
 
 const app = express();
 
